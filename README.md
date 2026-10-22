@@ -1,2 +1,1 @@
-# priyolinks
-My favourite sites
+GOOD LESSON FROM ABUBOKOR

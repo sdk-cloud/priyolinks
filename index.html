@@ -1,149 +1,186 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>হট গ্যালারি সাইট</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velvet — Photo Gallery</title>
+  <style>
+    * { box-sizing: border-box; }
 
-        body {
-            background-color: #1a1a1a;
-            color: #fff;
-            line-height: 1.6;
-        }
+    body {
+      margin: 0;
+      color: #f8f5f2;
+      background: #111014;
+      font-family: Arial, sans-serif;
+    }
 
-        header {
-            background-color: #000;
-            padding: 20px 0;
-            text-align: center;
-            border-bottom: 2px solid #ff4500;
-        }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 7%;
+      border-bottom: 1px solid #302c33;
+    }
 
-        header h1 {
-            font-size: 2.5rem;
-            color: #ff4500;
-            margin-bottom: 10px;
-        }
+    .logo {
+      color: #ff668a;
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
 
-        header p {
-            font-size: 1.2rem;
-            color: #ccc;
-        }
+    nav a {
+      color: #d8d2d8;
+      margin-left: 22px;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    nav a:hover { color: #ff668a; }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
+    .hero {
+      padding: 72px 7% 45px;
+      text-align: center;
+      background: radial-gradient(ellipse at top, #38202e 0%, #111014 70%);
+    }
 
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-        }
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
+    }
 
-        .gallery-item:hover {
-            transform: scale(1.03);
-        }
+    .hero p {
+      color: #c5bbc4;
+      margin: 0 auto 25px;
+      max-width: 560px;
+      line-height: 1.6;
+    }
 
-        .gallery-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      color: white;
+      background: #e94f78;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 700;
+    }
 
-        .gallery-item .caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 10px;
-            text-align: center;
-            font-size: 1rem;
-        }
+    main { padding: 35px 7% 70px; }
 
-        footer {
-            background-color: #000;
-            padding: 20px 0;
-            text-align: center;
-            margin-top: 30px;
-            border-top: 2px solid #ff4500;
-        }
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
 
-        footer p {
-            color: #ccc;
-        }
+    .section-title h2 { margin: 0; }
 
-        @media (max-width: 768px) {
-            .gallery {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            }
-        }
-    </style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      min-height: 300px;
+      border-radius: 14px;
+      background: #28242b;
+    }
+
+    .card img {
+      width: 100%;
+      height: 340px;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .card:hover img { transform: scale(1.06); }
+
+    .caption {
+      position: absolute;
+      inset: auto 0 0;
+      padding: 35px 16px 16px;
+      background: linear-gradient(transparent, rgba(0,0,0,.8));
+    }
+
+    .caption h3 { margin: 0 0 5px; }
+    .caption span { color: #ddd; font-size: .9rem; }
+
+    footer {
+      padding: 24px;
+      text-align: center;
+      color: #aaa1aa;
+      border-top: 1px solid #302c33;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 18px 5%; }
+      nav a { margin-left: 10px; font-size: .85rem; }
+      main { padding-inline: 5%; }
+      .hero { padding-inline: 5%; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>হট গ্যালারি</h1>
-        <p>আপনার প্রিয় মুহূর্তগুলি শেয়ার করুন</p>
-    </header>
+  <header>
+    <div class="logo">VELVET</div>
+    <nav>
+      <a href="#">হোম</a>
+      <a href="#gallery">গ্যালারি</a>
+      <a href="#about">সম্পর্কে</a>
+    </nav>
+  </header>
 
-    <div class="container">
-        <div class="gallery">
-            <!-- গ্যালারি আইটেমগুলি এখানে যোগ করুন -->
-            <div class="gallery-item">
-                <img src="https://source.unsplash.com/random/300x200/?hot,model" alt="হট মডেল">
-                <div class="caption">হট মডেল</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://source.unsplash.com/random/300x200/?hot,car" alt="হট কার">
-                <div class="caption">হট কার</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://source.unsplash.com/random/300x200/?hot,food" alt="হট ফুড">
-                <div class="caption">হট ফুড</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://source.unsplash.com/random/300x200/?hot,beach" alt="হট বিচ">
-                <div class="caption">হট বিচ</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://source.unsplash.com/random/300x200/?hot,fashion" alt="হট ফ্যাশন">
-                <div class="caption">হট ফ্যাশন</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://source.unsplash.com/random/300x200/?hot,city" alt="হট সিটি">
-                <div class="caption">হট সিটি</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://source.unsplash.com/random/300x200/?hot,technology" alt="হট টেকনোলজি">
-                <div class="caption">হট টেকনোলজি</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://source.unsplash.com/random/300x200/?hot,sports" alt="হট স্পোর্টস">
-                <div class="caption">হট স্পোর্টস</div>
-            </div>
-        </div>
+  <section class="hero" id="about">
+    <h1>দেখুন, অনুভব করুন</h1>
+    <p>ফ্যাশন, পোর্ট্রেট আর নান্দনিক মুহূর্তের এক ছোট্ট ছবি-গ্যালারি।</p>
+    <a class="button" href="#gallery">গ্যালারি দেখুন</a>
+  </section>
+
+  <main id="gallery">
+    <div class="section-title">
+      <h2>নতুন কালেকশন</h2>
+      <span>০১ — ০৬</span>
     </div>
 
-    <footer>
-        <p>&copy; ২০২৩ হট গ্যালারি সাইট | সব অধিকার সংরক্ষিত</p>
-    </footer>
+    <section class="gallery">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85" alt="পোর্ট্রেট ফটোগ্রাফি">
+        <div class="caption"><h3>Soft Portrait</h3><span>পোর্ট্রেট</span></div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85" alt="ফ্যাশন ফটোগ্রাফি">
+        <div class="caption"><h3>City Style</h3><span>ফ্যাশন</span></div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85" alt="স্টাইলিশ ফ্যাশন পোর্ট্রেট">
+        <div class="caption"><h3>Golden Hour</h3><span>লাইফস্টাইল</span></div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=85" alt="প্রাকৃতিক আলোয় পোর্ট্রেট">
+        <div class="caption"><h3>Natural Light</h3><span>পোর্ট্রেট</span></div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=900&q=85" alt="ফ্যাশন পোর্ট্রেট">
+        <div class="caption"><h3>Modern Muse</h3><span>ফ্যাশন</span></div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=900&q=85" alt="আউটডোর পোর্ট্রেট">
+        <div class="caption"><h3>Weekend Mood</h3><span>লাইফস্টাইল</span></div>
+      </article>
+    </section>
+  </main>
+
+  <footer>© 2026 Velvet Gallery</footer>
 </body>
 </html>

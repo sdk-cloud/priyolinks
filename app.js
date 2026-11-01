@@ -24,6 +24,8 @@ grid.addEventListener('click',e=>{const f=e.target.closest('[data-fav]');if(f){c
 grid.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('[data-open]')){e.preventDefault();openTool(e.target.dataset.open)}});
 $('#themeToggle').onclick=()=>{document.body.classList.toggle('dark');localStorage.setItem('priyo-theme',document.body.classList.contains('dark')?'dark':'light')};if(localStorage.getItem('priyo-theme')==='dark')document.body.classList.add('dark');
 $('#year').textContent=new Date().getFullYear();
+$('#mobileMenu').addEventListener('click',()=>{const nav=document.querySelector('.topbar nav');nav.classList.toggle('mobile-open')});
+document.querySelectorAll('.topbar nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.topbar nav').classList.remove('mobile-open')));
 const overlay=$('#toolOverlay'),workspace=$('#toolWorkspace');function openTool(id){const t=tools.find(x=>x.id===id);if(!t)return;$('#modalCategory').textContent=t.cat.toUpperCase()+' TOOL';$('#modalTitle').textContent=t.name;$('#modalDescription').textContent=t.desc;workspace.innerHTML=toolMarkup(id);overlay.hidden=false;document.body.style.overflow='hidden';if(id==='image')bindImage();if(id==='calculator')bindCalc()}
 function closeTool(){overlay.hidden=true;document.body.style.overflow='';workspace.innerHTML=''}$('#closeModal').onclick=closeTool;$('#modalDone').onclick=closeTool;overlay.addEventListener('click',e=>{if(e.target===overlay)closeTool()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeTool();if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();$('#searchInput').focus()}});
 function toolMarkup(id){switch(id){

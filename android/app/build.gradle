@@ -1,0 +1,30 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.priyotools.app'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.priyotools.app'
+        minSdk 23
+        targetSdk 35
+        versionCode 1
+        versionName '1.0.0'
+    }
+
+    buildTypes {
+        release {
+            // Signed with Android's standard debug key so this first APK can be installed.
+            // Replace with a private release keystore before publishing on Google Play.
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

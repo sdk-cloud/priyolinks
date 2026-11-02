@@ -8,6 +8,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
+import android.view.Window;
 
 public class MainActivity extends Activity {
     private WebView webView;
@@ -16,6 +18,20 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Window window = getWindow();
+        window.setStatusBarColor(android.graphics.Color.rgb(18, 60, 50));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.setDecorFitsSystemWindows(true);
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            window.setNavigationBarColor(android.graphics.Color.rgb(250, 248, 241));
+            window.getDecorView().setSystemUiVisibility(
+                window.getDecorView().getSystemUiVisibility()
+                    | android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR
+            );
+        }
+
         webView = new WebView(this);
         setContentView(webView);
 

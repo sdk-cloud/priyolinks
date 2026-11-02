@@ -1,45 +1,25 @@
-# PriyoTools
+# নূর — ইসলামিক ওয়েবসাইট
 
-**PriyoTools** is an English-language collection of free online utilities and a curated directory of free AI services.
+নূর একটি বাংলা ইসলামিক ওয়েবসাইট। কুরআন, হাদিস, দৈনন্দিন দোয়া, নামাজ সম্পর্কে প্রাথমিক তথ্য এবং নির্ভরযোগ্য ইসলামিক রিসোর্স এক জায়গায় সাজিয়ে দেওয়াই এর উদ্দেশ্য।
 
-## Pages
-- `index.html` — premium-style landing page with links to the tool and AI directories.
-- `tools.html` — searchable and filterable tool directory with interactive browser-based utilities.
-- `ai.html` — curated directory of free AI services, highlighting options that can be tried without signing in and clearly separating services that may require an account.
+## প্রধান বিভাগ
+- `index.html` — সম্পূর্ণ responsive বাংলা হোমপেজ।
+- `styles.css` — রঙ, টাইপোগ্রাফি, layout এবং mobile responsive design।
+- `islamic.js` — mobile navigation, copy buttons এবং local tasbih counter।
+- `android/` — ওয়েবসাইট দেখানোর জন্য Android WebView wrapper project।
 
-## Available browser-based tools
-- **Text:** Word Counter, Case Converter, Remove Extra Spaces.
-- **Calculators:** Basic Calculator, Percentage Calculator, Age & Date Difference.
-- **Developer:** JSON Formatter, Base64 Encoder/Decoder, URL Encoder/Decoder, UUID Generator.
-- **Image:** Image Resizer.
-- **Security:** Password Generator.
-- **Productivity:** Focus Timer.
-- **Education:** GPA Average Calculator.
+## ব্যবহার
+এটি একটি static website। `index.html` সরাসরি browser-এ খুললেই চলবে; build step বা package install দরকার নেই।
 
-## AI directory
-The AI directory links to third-party services including ChatGPT, Duck.ai, Gemini, Perplexity, Perchance, gizza.ai, ChatG, Microsoft Copilot, Claude and HuggingChat. Guest access, features, quotas and account requirements can vary by country, browser and provider policy. The directory is informational and is not affiliated with those providers.
+## গুরুত্বপূর্ণ নোট
+- কুরআনের আয়াত ও হাদিসের পাশে সূরা/হাদিস নম্বর দেওয়া হয়েছে। অনুবাদগুলো অর্থভিত্তিক বাংলা উপস্থাপনা; গভীর অধ্যয়নের জন্য মূল আরবি, স্বীকৃত অনুবাদ ও তাফসির মিলিয়ে পড়ুন।
+- নামাজের সময় স্থান ও তারিখভেদে পরিবর্তিত হয়। তাই সাইটে কোনো স্থির সময়কে আপনার এলাকার বর্তমান সময় হিসেবে দেখানো হয় না; স্থানীয় নির্ভরযোগ্য সময়সূচি অনুসরণ করুন।
+- বাহ্যিক রিসোর্সের নিজস্ব নীতি ও বিষয়বস্তুর দায় তাদের প্রকাশকদের।
+- সাইটটি শিক্ষামূলক সহায়ক; ব্যক্তিগত ধর্মীয়/ফিকহি সিদ্ধান্তের জন্য যোগ্য আলেমের পরামর্শ নিন।
+- তাসবিহ কাউন্টারটি কেবল বর্তমান পেজ খোলা থাকা অবস্থায় গণনা রাখে।
 
-## Run locally
-Open `index.html` in a modern browser. Choose **Explore tools** or **Free AI tools** to browse the directories. No build step or package installation is required.
+## Deploy
+Repository-টি Vercel-এর সঙ্গে যুক্ত থাকলে `main` branch-এ commit push হওয়ার পর স্বয়ংক্রিয় deployment শুরু হওয়ার কথা। Live URL: https://priyolinks.vercel.app/
 
-## Deploy with GitHub Pages
-1. Open **Settings → Pages** in this repository.
-2. Under **Build and deployment**, select **Deploy from a branch**.
-3. Select branch **main** and folder **/(root)**, then save.
-4. Wait for the Pages deployment to finish. Expected URL: `https://sdk-cloud.github.io/priyolinks/` if Pages is enabled and deployment succeeds.
-
-## Privacy and limitations
-- Most utilities process input in the browser and do not require an account.
-- External AI services have their own privacy policies and may process prompts on their servers. Do not submit passwords, private documents or sensitive personal information.
-- Free AI access is not necessarily unlimited. Features and sign-in requirements can change without notice.
-- Favorites are not currently implemented in this release.
-- This is a static website; it has no user accounts, server-side database, secure admin dashboard, or cloud file storage.
-- The password generator uses the browser's Web Crypto API. For important accounts, store unique passwords in a trusted password manager.
-- The GPA tool calculates a simple arithmetic average; grading systems and credit weighting vary by institution.
-- Check important calculations independently. The site is a utility collection, not professional or financial advice.
-
-## Roadmap
-Add more converters, PDF utilities, accessibility improvements, tool-specific help pages, and automated tests. Keep sensitive data out of any tool unless its processing and privacy behavior are clear.
-
-## License
-No license has been declared yet. Add a license file before inviting reuse or redistribution.
+## Android wrapper
+Android project-এর WebView একই live URL লোড করে। অ্যাপের নাম ও launcher branding আলাদা করে আপডেট করতে হবে; Play Store release-এর আগে নিজস্ব secure signing keystore ব্যবহার করুন।

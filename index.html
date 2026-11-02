@@ -1,40 +1,100 @@
 <!doctype html>
-<html lang="en">
+<html lang="bn">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#101827">
-<meta name="description" content="PriyoTools — a growing collection of free, fast and easy online tools for everyday work.">
-<title>PriyoTools — Free Online Tools for Everyone</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123c32">
+<meta name="description" content="নূর — কুরআন, হাদিস, দোয়া ও ইসলামিক জীবনচর্চার জন্য একটি সুন্দর বাংলা ইসলামিক ওয়েবসাইট।">
+<title>নূর — কুরআন ও ইসলামিক জীবন</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="topbar"><a class="brand" href="#"><span class="brand-icon">P</span><span>Priyo<span class="brand-accent">Tools</span><small>TOOLS FOR EVERYDAY</small></span></a>
-<nav><a href="#tools">Explore tools</a><a href="ai.html">Free AI tools</a><a href="#categories">Categories</a><a href="#about">About</a></nav>
-<div class="top-actions"><button class="icon-btn" id="themeToggle" aria-label="Toggle theme">☼</button><a class="submit-link" href="mailto:hello@priyotools.com?subject=Suggest%20a%20tool">Suggest a tool ↗</a><button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button></div>
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="নূর হোম">
+    <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M31.8 5.8A19 19 0 1 0 42 36.4 16.8 16.8 0 1 1 31.8 5.8Z" fill="currentColor"/><path d="m35.2 9.2 1.7 4.1 4.4.3-3.4 2.8 1.1 4.2-3.8-2.3-3.8 2.3 1.1-4.2-3.4-2.8 4.4-.3Z" fill="#d8b66b"/></svg></span>
+    <span><b>নূর</b><small>আলোর পথে, জ্ঞানের সাথে</small></span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="মেনু খুলুন">☰</button>
+  <nav id="mainNav">
+    <a href="#quran">আল-কুরআন</a><a href="#hadith">হাদিস</a><a href="#duas">দোয়া</a><a href="#prayer">নামাজ</a><a href="#articles">ইসলামিক জ্ঞান</a>
+  </nav>
+  <a class="header-cta" href="#daily">আজকের স্মরণ <span>↗</span></a>
 </header>
-<main>
-<section class="hero"><div class="hero-glow"></div><div class="hero-content"><div class="pill"><span class="pulse"></span> YOUR EVERYDAY TOOLKIT</div><h1>Small tools.<br><span>Big productivity.</span></h1><p class="hero-copy">A growing collection of free, simple and useful online tools. Get things done faster — right in your browser.</p>
-<div class="hero-search"><span>⌕</span><input id="searchInput" type="search" placeholder="Search for a tool... e.g. word counter" autocomplete="off"><kbd>⌘ K</kbd></div>
-<div class="hero-meta"><span>✦ Free to use</span><span>↗ No sign-up required</span><span>◈ Privacy-friendly tools</span></div></div>
-<div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-tile tile-a">⌗<small>TEXT</small></div><div class="hero-tile tile-b">％<small>MATH</small></div><div class="hero-tile tile-c">{ }<small>CODE</small></div><div class="hero-core"><span>✳</span><b>TOOLS</b><small>MADE SIMPLE</small></div></div></section>
-<section class="trust-row"><div><strong>100%</strong><span>Free to use</span></div><i></i><div><strong>Browser-based</strong><span>Many tools work locally</span></div><i></i><div><strong>Always growing</strong><span>More tools coming soon</span></div></section>
-<section class="section" id="tools"><div class="section-heading"><div><span class="eyebrow">THE TOOLBOX</span><h2>Find the right tool</h2><p>Practical utilities, thoughtfully organized.</p></div><div class="view-toggle"><button class="active" id="allTools">All tools</button><button id="favoriteTools">♥ Favorites <span id="favCount">0</span></button></div></div>
-<div class="category-chips" id="categoryChips"><button class="chip active" data-category="All">All tools</button><button class="chip" data-category="Text">Text</button><button class="chip" data-category="Calculators">Calculators</button><button class="chip" data-category="Developer">Developer</button><button class="chip" data-category="Images">Images</button><button class="chip" data-category="Converters">Converters</button><button class="chip" data-category="Security">Security</button></div>
-<div class="tool-grid" id="toolGrid"></div><div class="empty-state" id="emptyState" hidden><span>⌕</span><h3>No tools found</h3><p>Try another search or choose a different category.</p></div>
-</section>
-<section class="section category-section" id="categories"><div class="section-heading"><div><span class="eyebrow">BROWSE BY CATEGORY</span><h2>Everything in its place</h2><p>Pick a category and discover tools for the task at hand.</p></div></div><div class="category-grid">
-<button class="category-card" data-pick="Text"><span class="category-icon purple">Aa</span><b>Text & Writing</b><small>Count, format and transform text</small><em>Explore tools ↗</em></button>
-<button class="category-card" data-pick="Calculators"><span class="category-icon orange">∑</span><b>Calculators</b><small>Quick answers for everyday math</small><em>Explore tools ↗</em></button>
-<button class="category-card" data-pick="Developer"><span class="category-icon blue">{ }</span><b>Developer</b><small>Format, encode and inspect data</small><em>Explore tools ↗</em></button>
-<button class="category-card" data-pick="Images"><span class="category-icon pink">▧</span><b>Image tools</b><small>Resize and optimize images</small><em>Explore tools ↗</em></button>
-<button class="category-card" data-pick="Converters"><span class="category-icon green">⇄</span><b>Converters</b><small>Convert common units and formats</small><em>Explore tools ↗</em></button>
-<button class="category-card" data-pick="Security"><span class="category-icon yellow">✧</span><b>Security & Utility</b><small>Generate useful random values</small><em>Explore tools ↗</em></button>
-</div></section>
-<section class="cta" id="about"><div class="cta-mark">✳</div><div><span class="eyebrow">BUILT TO BE USEFUL</span><h2>Less hassle. More done.</h2><p>PriyoTools is an independent collection of handy web utilities. Tools are added over time, with a focus on speed, clarity and ease of use.</p></div><a href="mailto:hello@priyotools.com?subject=PriyoTools%20feedback" class="cta-link">Share feedback ↗</a></section>
+<main id="home">
+  <section class="hero">
+    <div class="hero-pattern"></div>
+    <div class="hero-inner">
+      <div class="eyebrow"><span></span> بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+      <h1>হৃদয়ে ঈমান,<br><em>জীবনে নূরের</em> ছোঁয়া</h1>
+      <p>কুরআন ও সুন্নাহর আলোকে প্রতিদিনের জীবনকে সুন্দর করে তুলুন। জানুন, পড়ুন, আমল করুন — ধীরে ধীরে, আন্তরিকতার সাথে।</p>
+      <div class="hero-actions"><a class="btn btn-gold" href="#quran">কুরআন পড়ুন <span>→</span></a><a class="btn btn-outline" href="#duas">দোয়া শিখুন</a></div>
+      <div class="hero-note"><span class="note-line"></span> জ্ঞান অর্জন থেকে আমল — প্রতিটি পদক্ষেপই গুরুত্বপূর্ণ</div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="arch arch-back"></div><div class="arch arch-front"></div>
+      <div class="lantern"><svg viewBox="0 0 150 220"><path d="M75 5v20M55 25h40l-7 20H62Z" fill="none" stroke="#d9b86f" stroke-width="3"/><path d="M48 45h54l12 22-8 105-31 30-31-30-8-105Z" fill="#d8b66b" fill-opacity=".13" stroke="#d9b86f" stroke-width="3"/><path d="M48 67h66M45 160h70M75 45v157" stroke="#d9b86f" stroke-width="2"/><path d="m75 77 22 37-22 36-22-36Z" fill="#e8c77f" fill-opacity=".3"/><path d="M60 202h30l-15 13Z" fill="#d9b86f"/></svg></div>
+      <span class="spark spark-one">✦</span><span class="spark spark-two">✧</span><span class="spark spark-three">✦</span>
+    </div>
+    <div class="hero-bottom"><span>﷽</span><span>আল্লাহর স্মরণেই অন্তর প্রশান্তি পায়</span><span>সূরা আর-রা'দ · ১৩:২৮</span></div>
+  </section>
+
+  <section class="quick-links" aria-label="দ্রুত প্রবেশ">
+    <a href="#quran"><span class="quick-icon">۞</span><b>আল-কুরআন</b><small>আয়াত ও অর্থ</small></a>
+    <a href="#hadith"><span class="quick-icon">ﷺ</span><b>হাদিস</b><small>নবীজির বাণী</small></a>
+    <a href="#duas"><span class="quick-icon">م</span><b>দৈনন্দিন দোয়া</b><small>প্রতিদিনের আমল</small></a>
+    <a href="#prayer"><span class="quick-icon">☾</span><b>নামাজ শিক্ষা</b><small>ইবাদতের গাইড</small></a>
+  </section>
+
+  <section class="section daily-section" id="daily">
+    <div class="section-heading"><div><span class="section-kicker">আজকের অনুপ্রেরণা</span><h2>দিনের শুরু হোক স্মরণে</h2></div><span class="heading-ornament">✧</span></div>
+    <article class="daily-card">
+      <div class="daily-symbol">۞</div>
+      <div class="daily-content"><span class="arabic-label">আল-কুরআন</span><p class="arabic verse">فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ</p><p class="translation">“তোমরা আমাকে স্মরণ করো, আমিও তোমাদের স্মরণ করব। আর আমার প্রতি কৃতজ্ঞতা প্রকাশ করো এবং অকৃতজ্ঞ হয়ো না।”</p><span class="source">সূরা আল-বাকারা · ২:১৫২</span></div>
+      <button class="copy-btn" data-copy="فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ" aria-label="আরবি আয়াত কপি করুন">▢</button>
+    </article>
+  </section>
+
+  <section class="section" id="quran">
+    <div class="section-heading"><div><span class="section-kicker">পবিত্র গ্রন্থ</span><h2>আল-কুরআন</h2><p>পড়ুন, বুঝুন এবং জীবনে ধারণ করুন।</p></div><span class="heading-ornament">۞</span></div>
+    <div class="feature-grid">
+      <article class="feature-card quran-card"><div class="card-top"><span class="feature-icon">۞</span><span class="tag">কুরআন</span></div><h3>কুরআন তিলাওয়াত</h3><p>প্রতিদিন অল্প হলেও কুরআন পড়ার অভ্যাস গড়ে তুলুন।</p><a href="https://quran.com/" target="_blank" rel="noopener noreferrer">কুরআন পড়ুন <span>↗</span></a></article>
+      <article class="feature-card meaning-card"><div class="card-top"><span class="feature-icon">文</span><span class="tag">অনুবাদ</span></div><h3>অর্থ ও তাফসির</h3><p>আয়াতের অর্থ ও ব্যাখ্যা নির্ভরযোগ্য সূত্র থেকে জানুন।</p><a href="https://quran.com/tafsirs" target="_blank" rel="noopener noreferrer">তাফসির দেখুন <span>↗</span></a></article>
+      <article class="feature-card listen-card"><div class="card-top"><span class="feature-icon">♫</span><span class="tag">তিলাওয়াত</span></div><h3>কুরআন শুনুন</h3><p>সুন্দর তিলাওয়াত শুনে কুরআনের সাথে সময় কাটান।</p><a href="https://quran.com/" target="_blank" rel="noopener noreferrer">শুনতে শুরু করুন <span>↗</span></a></article>
+    </div>
+  </section>
+
+  <section class="section hadith-section" id="hadith">
+    <div class="section-heading"><div><span class="section-kicker">নবীজির শিক্ষা</span><h2>হাদিস থেকে শিক্ষা</h2><p>রাসূলুল্লাহ ﷺ-এর বাণী আমাদের পথচলার অনুপ্রেরণা।</p></div><span class="heading-ornament">ﷺ</span></div>
+    <article class="hadith-card"><span class="hadith-quote">“</span><p class="arabic hadith-arabic">إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ</p><p class="hadith-bn">“নিশ্চয়ই সকল কাজের ফলাফল নিয়তের ওপর নির্ভরশীল।”</p><div class="hadith-source"><span></span> সহিহ আল-বুখারি · হাদিস ১</div><button class="copy-btn" data-copy="إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ — নিশ্চয়ই সকল কাজের ফলাফল নিয়তের ওপর নির্ভরশীল। (সহিহ আল-বুখারি, ১)" aria-label="হাদিস কপি করুন">▢</button></article>
+  </section>
+
+  <section class="section" id="duas">
+    <div class="section-heading"><div><span class="section-kicker">প্রতিদিনের আমল</span><h2>প্রয়োজনীয় দোয়া</h2><p>দৈনন্দিন জীবনের কিছু পরিচিত দোয়া।</p></div><span class="heading-ornament">م</span></div>
+    <div class="dua-grid">
+      <article class="dua-card"><span class="dua-number">০১</span><h3>ঘুম থেকে ওঠার দোয়া</h3><p class="arabic">الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ</p><p>সকল প্রশংসা আল্লাহর, যিনি আমাদের মৃত্যুর (ঘুমের) পর জীবিত করেছেন এবং তাঁর কাছেই পুনরুত্থান।</p><span class="source">সহিহ আল-বুখারি · ৬৩১২</span></article>
+      <article class="dua-card"><span class="dua-number">০২</span><h3>জ্ঞান বৃদ্ধির দোয়া</h3><p class="arabic">رَبِّ زِدْنِي عِلْمًا</p><p>হে আমার রব, আমার জ্ঞান বৃদ্ধি করে দিন।</p><span class="source">সূরা ত্ব-হা · ২০:১১৪</span></article>
+      <article class="dua-card"><span class="dua-number">০৩</span><h3>ক্ষমা প্রার্থনা</h3><p class="arabic">رَبَّنَا ظَلَمْنَا أَنْفُسَنَا وَإِنْ لَمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الْخَاسِرِينَ</p><p>হে আমাদের রব, আমরা নিজেদের প্রতি জুলুম করেছি। আপনি ক্ষমা ও দয়া না করলে আমরা ক্ষতিগ্রস্তদের অন্তর্ভুক্ত হব।</p><span class="source">সূরা আল-আ'রাফ · ৭:২৩</span></article>
+    </div>
+  </section>
+
+  <section class="prayer-band" id="prayer"><div class="prayer-inner"><div><span class="section-kicker">ইবাদতের ভিত্তি</span><h2>নামাজ — রবের সাথে সংযোগ</h2><p>পাঁচ ওয়াক্ত নামাজের সময় স্থান ও তারিখ অনুযায়ী পরিবর্তিত হয়। নিজের এলাকার নির্ভরযোগ্য সময়সূচি অনুসরণ করুন।</p><a class="btn btn-gold" href="https://www.islamicfinder.org/world/" target="_blank" rel="noopener noreferrer">নামাজের সময় দেখুন ↗</a></div><div class="prayer-list"><div><span>ফজর</span><b>ভোর</b></div><div><span>যোহর</span><b>দুপুর</b></div><div><span>আসর</span><b>বিকেল</b></div><div><span>মাগরিব</span><b>সূর্যাস্তের পর</b></div><div><span>ইশা</span><b>রাত</b></div></div></div></section>
+
+  <section class="section" id="articles">
+    <div class="section-heading"><div><span class="section-kicker">জানুন ও শিখুন</span><h2>ইসলামিক জ্ঞানচর্চা</h2><p>বিশ্বস্ত উৎস থেকে ধাপে ধাপে শিখুন।</p></div><span class="heading-ornament">✧</span></div>
+    <div class="learn-grid">
+      <a class="learn-card" href="https://sunnah.com/" target="_blank" rel="noopener noreferrer"><span>01 / হাদিস</span><h3>সুন্নাহর আলোকে জীবন</h3><p>হাদিসের মূল আরবি পাঠ ও সূত্র অনুসন্ধান করুন।</p><b>পড়ুন ↗</b></a>
+      <a class="learn-card" href="https://www.islamweb.net/en/" target="_blank" rel="noopener noreferrer"><span>02 / জ্ঞান</span><h3>প্রশ্ন ও ইসলামিক জ্ঞান</h3><p>বিভিন্ন বিষয়ে প্রবন্ধ ও শিক্ষামূলক আলোচনা পড়ুন।</p><b>জানুন ↗</b></a>
+      <a class="learn-card" href="https://quran.com/" target="_blank" rel="noopener noreferrer"><span>03 / অধ্যয়ন</span><h3>নিয়মিত অধ্যয়ন</h3><p>কুরআন, অনুবাদ ও তাফসির পড়ার অভ্যাস তৈরি করুন।</p><b>শুরু করুন ↗</b></a>
+    </div>
+  </section>
+
+  <section class="tasbih-section"><div class="tasbih-copy"><span class="section-kicker">ছোট্ট আমল</span><h2>তাসবিহ কাউন্টার</h2><p>যিকিরের সংখ্যা গুনতে এই কাউন্টারটি ব্যবহার করুন। কাউন্টারটি শুধু আপনার এই ব্রাউজার সেশনে কাজ করে।</p></div><div class="tasbih-widget"><div class="tasbih-count" id="tasbihCount">০</div><button id="tasbihAdd" class="tasbih-add" aria-label="একবার গণনা করুন">গণনা করুন</button><button id="tasbihReset" class="tasbih-reset">আবার শুরু</button></div></section>
 </main>
-<footer><a class="brand footer-brand" href="#"><span class="brand-icon">P</span><span>Priyo<span class="brand-accent">Tools</span><small>TOOLS FOR EVERYDAY</small></span></a><div class="footer-note">Free online tools, made simple.<br><span>© <b id="year"></b> PriyoTools. Built for everyone.</span></div><div class="footer-links"><a href="#tools">Tools</a><a href="#categories">Categories</a><a href="mailto:hello@priyotools.com">Contact</a></div></footer>
-<div class="tool-overlay" id="toolOverlay" hidden><section class="tool-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-head"><div><span class="eyebrow" id="modalCategory">TOOL</span><h2 id="modalTitle">Tool name</h2><p id="modalDescription"></p></div><button class="close-modal" id="closeModal" aria-label="Close">×</button></div><div id="toolWorkspace" class="tool-workspace"></div><div class="modal-foot"><span>✳ PriyoTools · Free utility</span><button id="modalDone">Close tool</button></div></section></div>
-<script src="app.js"></script>
-</body></html>
+<footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">☾</span><span><b>নূর</b><small>আলোর পথে, জ্ঞানের সাথে</small></span></a><p>কুরআন ও সুন্নাহর আলোকে সুন্দর জীবন গড়ার ছোট্ট প্রয়াস।</p><div class="footer-bottom"><span>© <b id="year"></b> নূর। সর্বস্বত্ব সংরক্ষিত।</span><span>ইলম · আমল · আখলাক</span></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="islamic.js"></script>
+</body>
+</html>

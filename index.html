@@ -1,100 +1,36 @@
 <!doctype html>
 <html lang="bn">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#123c32">
-<meta name="description" content="নূর — কুরআন, হাদিস, দোয়া ও ইসলামিক জীবনচর্চার জন্য একটি সুন্দর বাংলা ইসলামিক ওয়েবসাইট।">
-<title>নূর — কুরআন ও ইসলামিক জীবন</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090d18">
+<meta name="description" content="PriyoLinks AI — chat, writing, coding and creative AI tools in one modern workspace.">
+<title>PriyoLinks AI — Your creative AI workspace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="#home" aria-label="নূর হোম">
-    <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M31.8 5.8A19 19 0 1 0 42 36.4 16.8 16.8 0 1 1 31.8 5.8Z" fill="currentColor"/><path d="m35.2 9.2 1.7 4.1 4.4.3-3.4 2.8 1.1 4.2-3.8-2.3-3.8 2.3 1.1-4.2-3.4-2.8 4.4-.3Z" fill="#d8b66b"/></svg></span>
-    <span><b>নূর</b><small>আলোর পথে, জ্ঞানের সাথে</small></span>
-  </a>
-  <button class="menu-toggle" id="menuToggle" aria-label="মেনু খুলুন">☰</button>
-  <nav id="mainNav">
-    <a href="#quran">আল-কুরআন</a><a href="#hadith">হাদিস</a><a href="#duas">দোয়া</a><a href="#prayer">নামাজ</a><a href="#articles">ইসলামিক জ্ঞান</a>
-  </nav>
-  <a class="header-cta" href="#daily">আজকের স্মরণ <span>↗</span></a>
-</header>
+<div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+<header class="topbar"><a class="brand" href="#home"><span class="brand-icon">✳</span><span>PriyoLinks<span class="brand-ai"> AI</span><small>YOUR CREATIVE WORKSPACE</small></span></a>
+<nav id="nav"><a href="#tools">AI Tools</a><a href="#features">Features</a><a href="#how">How it works</a></nav>
+<div class="top-actions"><span class="status"><i></i> AI workspace</span><a class="top-cta" href="#chat">Try it free <span>↗</span></a><button class="menu" id="menu" aria-label="Open menu">☰</button></div></header>
 <main id="home">
-  <section class="hero">
-    <div class="hero-pattern"></div>
-    <div class="hero-inner">
-      <div class="eyebrow"><span></span> بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
-      <h1>হৃদয়ে ঈমান,<br><em>জীবনে নূরের</em> ছোঁয়া</h1>
-      <p>কুরআন ও সুন্নাহর আলোকে প্রতিদিনের জীবনকে সুন্দর করে তুলুন। জানুন, পড়ুন, আমল করুন — ধীরে ধীরে, আন্তরিকতার সাথে।</p>
-      <div class="hero-actions"><a class="btn btn-gold" href="#quran">কুরআন পড়ুন <span>→</span></a><a class="btn btn-outline" href="#duas">দোয়া শিখুন</a></div>
-      <div class="hero-note"><span class="note-line"></span> জ্ঞান অর্জন থেকে আমল — প্রতিটি পদক্ষেপই গুরুত্বপূর্ণ</div>
-    </div>
-    <div class="hero-art" aria-hidden="true">
-      <div class="arch arch-back"></div><div class="arch arch-front"></div>
-      <div class="lantern"><svg viewBox="0 0 150 220"><path d="M75 5v20M55 25h40l-7 20H62Z" fill="none" stroke="#d9b86f" stroke-width="3"/><path d="M48 45h54l12 22-8 105-31 30-31-30-8-105Z" fill="#d8b66b" fill-opacity=".13" stroke="#d9b86f" stroke-width="3"/><path d="M48 67h66M45 160h70M75 45v157" stroke="#d9b86f" stroke-width="2"/><path d="m75 77 22 37-22 36-22-36Z" fill="#e8c77f" fill-opacity=".3"/><path d="M60 202h30l-15 13Z" fill="#d9b86f"/></svg></div>
-      <span class="spark spark-one">✦</span><span class="spark spark-two">✧</span><span class="spark spark-three">✦</span>
-    </div>
-    <div class="hero-bottom"><span>﷽</span><span>আল্লাহর স্মরণেই অন্তর প্রশান্তি পায়</span><span>সূরা আর-রা'দ · ১৩:২৮</span></div>
-  </section>
-
-  <section class="quick-links" aria-label="দ্রুত প্রবেশ">
-    <a href="#quran"><span class="quick-icon">۞</span><b>আল-কুরআন</b><small>আয়াত ও অর্থ</small></a>
-    <a href="#hadith"><span class="quick-icon">ﷺ</span><b>হাদিস</b><small>নবীজির বাণী</small></a>
-    <a href="#duas"><span class="quick-icon">م</span><b>দৈনন্দিন দোয়া</b><small>প্রতিদিনের আমল</small></a>
-    <a href="#prayer"><span class="quick-icon">☾</span><b>নামাজ শিক্ষা</b><small>ইবাদতের গাইড</small></a>
-  </section>
-
-  <section class="section daily-section" id="daily">
-    <div class="section-heading"><div><span class="section-kicker">আজকের অনুপ্রেরণা</span><h2>দিনের শুরু হোক স্মরণে</h2></div><span class="heading-ornament">✧</span></div>
-    <article class="daily-card">
-      <div class="daily-symbol">۞</div>
-      <div class="daily-content"><span class="arabic-label">আল-কুরআন</span><p class="arabic verse">فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ</p><p class="translation">“তোমরা আমাকে স্মরণ করো, আমিও তোমাদের স্মরণ করব। আর আমার প্রতি কৃতজ্ঞতা প্রকাশ করো এবং অকৃতজ্ঞ হয়ো না।”</p><span class="source">সূরা আল-বাকারা · ২:১৫২</span></div>
-      <button class="copy-btn" data-copy="فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ" aria-label="আরবি আয়াত কপি করুন">▢</button>
-    </article>
-  </section>
-
-  <section class="section" id="quran">
-    <div class="section-heading"><div><span class="section-kicker">পবিত্র গ্রন্থ</span><h2>আল-কুরআন</h2><p>পড়ুন, বুঝুন এবং জীবনে ধারণ করুন।</p></div><span class="heading-ornament">۞</span></div>
-    <div class="feature-grid">
-      <article class="feature-card quran-card"><div class="card-top"><span class="feature-icon">۞</span><span class="tag">কুরআন</span></div><h3>কুরআন তিলাওয়াত</h3><p>প্রতিদিন অল্প হলেও কুরআন পড়ার অভ্যাস গড়ে তুলুন।</p><a href="https://quran.com/" target="_blank" rel="noopener noreferrer">কুরআন পড়ুন <span>↗</span></a></article>
-      <article class="feature-card meaning-card"><div class="card-top"><span class="feature-icon">文</span><span class="tag">অনুবাদ</span></div><h3>অর্থ ও তাফসির</h3><p>আয়াতের অর্থ ও ব্যাখ্যা নির্ভরযোগ্য সূত্র থেকে জানুন।</p><a href="https://quran.com/tafsirs" target="_blank" rel="noopener noreferrer">তাফসির দেখুন <span>↗</span></a></article>
-      <article class="feature-card listen-card"><div class="card-top"><span class="feature-icon">♫</span><span class="tag">তিলাওয়াত</span></div><h3>কুরআন শুনুন</h3><p>সুন্দর তিলাওয়াত শুনে কুরআনের সাথে সময় কাটান।</p><a href="https://quran.com/" target="_blank" rel="noopener noreferrer">শুনতে শুরু করুন <span>↗</span></a></article>
-    </div>
-  </section>
-
-  <section class="section hadith-section" id="hadith">
-    <div class="section-heading"><div><span class="section-kicker">নবীজির শিক্ষা</span><h2>হাদিস থেকে শিক্ষা</h2><p>রাসূলুল্লাহ ﷺ-এর বাণী আমাদের পথচলার অনুপ্রেরণা।</p></div><span class="heading-ornament">ﷺ</span></div>
-    <article class="hadith-card"><span class="hadith-quote">“</span><p class="arabic hadith-arabic">إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ</p><p class="hadith-bn">“নিশ্চয়ই সকল কাজের ফলাফল নিয়তের ওপর নির্ভরশীল।”</p><div class="hadith-source"><span></span> সহিহ আল-বুখারি · হাদিস ১</div><button class="copy-btn" data-copy="إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ — নিশ্চয়ই সকল কাজের ফলাফল নিয়তের ওপর নির্ভরশীল। (সহিহ আল-বুখারি, ১)" aria-label="হাদিস কপি করুন">▢</button></article>
-  </section>
-
-  <section class="section" id="duas">
-    <div class="section-heading"><div><span class="section-kicker">প্রতিদিনের আমল</span><h2>প্রয়োজনীয় দোয়া</h2><p>দৈনন্দিন জীবনের কিছু পরিচিত দোয়া।</p></div><span class="heading-ornament">م</span></div>
-    <div class="dua-grid">
-      <article class="dua-card"><span class="dua-number">০১</span><h3>ঘুম থেকে ওঠার দোয়া</h3><p class="arabic">الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ</p><p>সকল প্রশংসা আল্লাহর, যিনি আমাদের মৃত্যুর (ঘুমের) পর জীবিত করেছেন এবং তাঁর কাছেই পুনরুত্থান।</p><span class="source">সহিহ আল-বুখারি · ৬৩১২</span></article>
-      <article class="dua-card"><span class="dua-number">০২</span><h3>জ্ঞান বৃদ্ধির দোয়া</h3><p class="arabic">رَبِّ زِدْنِي عِلْمًا</p><p>হে আমার রব, আমার জ্ঞান বৃদ্ধি করে দিন।</p><span class="source">সূরা ত্ব-হা · ২০:১১৪</span></article>
-      <article class="dua-card"><span class="dua-number">০৩</span><h3>ক্ষমা প্রার্থনা</h3><p class="arabic">رَبَّنَا ظَلَمْنَا أَنْفُسَنَا وَإِنْ لَمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الْخَاسِرِينَ</p><p>হে আমাদের রব, আমরা নিজেদের প্রতি জুলুম করেছি। আপনি ক্ষমা ও দয়া না করলে আমরা ক্ষতিগ্রস্তদের অন্তর্ভুক্ত হব।</p><span class="source">সূরা আল-আ'রাফ · ৭:২৩</span></article>
-    </div>
-  </section>
-
-  <section class="prayer-band" id="prayer"><div class="prayer-inner"><div><span class="section-kicker">ইবাদতের ভিত্তি</span><h2>নামাজ — রবের সাথে সংযোগ</h2><p>পাঁচ ওয়াক্ত নামাজের সময় স্থান ও তারিখ অনুযায়ী পরিবর্তিত হয়। নিজের এলাকার নির্ভরযোগ্য সময়সূচি অনুসরণ করুন।</p><a class="btn btn-gold" href="https://www.islamicfinder.org/world/" target="_blank" rel="noopener noreferrer">নামাজের সময় দেখুন ↗</a></div><div class="prayer-list"><div><span>ফজর</span><b>ভোর</b></div><div><span>যোহর</span><b>দুপুর</b></div><div><span>আসর</span><b>বিকেল</b></div><div><span>মাগরিব</span><b>সূর্যাস্তের পর</b></div><div><span>ইশা</span><b>রাত</b></div></div></div></section>
-
-  <section class="section" id="articles">
-    <div class="section-heading"><div><span class="section-kicker">জানুন ও শিখুন</span><h2>ইসলামিক জ্ঞানচর্চা</h2><p>বিশ্বস্ত উৎস থেকে ধাপে ধাপে শিখুন।</p></div><span class="heading-ornament">✧</span></div>
-    <div class="learn-grid">
-      <a class="learn-card" href="https://sunnah.com/" target="_blank" rel="noopener noreferrer"><span>01 / হাদিস</span><h3>সুন্নাহর আলোকে জীবন</h3><p>হাদিসের মূল আরবি পাঠ ও সূত্র অনুসন্ধান করুন।</p><b>পড়ুন ↗</b></a>
-      <a class="learn-card" href="https://www.islamweb.net/en/" target="_blank" rel="noopener noreferrer"><span>02 / জ্ঞান</span><h3>প্রশ্ন ও ইসলামিক জ্ঞান</h3><p>বিভিন্ন বিষয়ে প্রবন্ধ ও শিক্ষামূলক আলোচনা পড়ুন।</p><b>জানুন ↗</b></a>
-      <a class="learn-card" href="https://quran.com/" target="_blank" rel="noopener noreferrer"><span>03 / অধ্যয়ন</span><h3>নিয়মিত অধ্যয়ন</h3><p>কুরআন, অনুবাদ ও তাফসির পড়ার অভ্যাস তৈরি করুন।</p><b>শুরু করুন ↗</b></a>
-    </div>
-  </section>
-
-  <section class="tasbih-section"><div class="tasbih-copy"><span class="section-kicker">ছোট্ট আমল</span><h2>তাসবিহ কাউন্টার</h2><p>যিকিরের সংখ্যা গুনতে এই কাউন্টারটি ব্যবহার করুন। কাউন্টারটি শুধু আপনার এই ব্রাউজার সেশনে কাজ করে।</p></div><div class="tasbih-widget"><div class="tasbih-count" id="tasbihCount">০</div><button id="tasbihAdd" class="tasbih-add" aria-label="একবার গণনা করুন">গণনা করুন</button><button id="tasbihReset" class="tasbih-reset">আবার শুরু</button></div></section>
-</main>
-<footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">☾</span><span><b>নূর</b><small>আলোর পথে, জ্ঞানের সাথে</small></span></a><p>কুরআন ও সুন্নাহর আলোকে সুন্দর জীবন গড়ার ছোট্ট প্রয়াস।</p><div class="footer-bottom"><span>© <b id="year"></b> নূর। সর্বস্বত্ব সংরক্ষিত।</span><span>ইলম · আমল · আখলাক</span></div></footer>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script src="islamic.js"></script>
-</body>
-</html>
+<section class="hero"><div class="hero-copy"><div class="eyebrow"><span>✦</span> ONE SPACE. ENDLESS POSSIBILITIES.</div><h1>তোমার আইডিয়া,<br><span>AI-এর শক্তিতে</span><br>নতুন রূপ পাক।</h1><p>লেখালেখি, কোডিং, অনুবাদ, আইডিয়া আর সৃজনশীল কাজ—সবকিছুর জন্য এক জায়গায় তোমার AI workspace.</p><div class="hero-buttons"><a class="btn primary" href="#chat">চ্যাট শুরু করো <span>↗</span></a><a class="btn secondary" href="#tools">সব AI Tools দেখো</a></div><div class="trust"><div class="avatars"><b>P</b><b>L</b><b>AI</b></div><span>এক জায়গায় কাজের স্মার্ট সহকারী</span><span class="sparkle">✧ ✧ ✧</span></div></div>
+<div class="hero-visual"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="core"><span>✳</span><small>PRIYOLINKS</small><b>AI</b></div><div class="float-card card-chat"><span class="mini-icon purple">✦</span><div><b>AI Chat</b><small>ভাবনা থেকে সমাধান</small></div><span class="live-dot"></span></div><div class="float-card card-write"><span class="mini-icon blue">✎</span><div><b>Smart Writing</b><small>শব্দ হোক আরও সুন্দর</small></div></div><div class="float-card card-code"><span class="mini-icon orange">&lt;/&gt;</span><div><b>Code Assistant</b><small>Build something great</small></div></div><div class="tiny-star star-a">✦</div><div class="tiny-star star-b">✧</div></div></section>
+<div class="ticker"><span>✳ AI CHAT</span><i></i><span>✦ SMART WRITING</span><i></i><span>⌘ CODE ASSISTANT</span><i></i><span>文 TRANSLATION</span><i></i><span>✧ CREATIVE IDEAS</span></div>
+<section class="section" id="tools"><div class="section-head"><div><span class="kicker">YOUR AI TOOLBOX</span><h2>এক প্ল্যাটফর্মে <em>অনেক সম্ভাবনা</em></h2><p>তোমার প্রতিদিনের কাজকে সহজ করতে দরকারি AI tools.</p></div><a class="text-link" href="#chat">Explore workspace ↗</a></div>
+<div class="tool-grid">
+<button class="tool-card featured" data-tool="chat"><span class="tool-icon violet">✳</span><span class="tool-tag">POPULAR</span><h3>AI Chat Assistant</h3><p>প্রশ্ন করো, আইডিয়া নাও, কোনো বিষয় সহজভাবে বুঝে নাও।</p><span class="tool-go">চ্যাট শুরু করো <b>↗</b></span></button>
+<button class="tool-card" data-tool="write"><span class="tool-icon blue">✎</span><h3>Writing Assistant</h3><p>ইমেইল, পোস্ট, আর্টিকেল বা নতুন কনটেন্টের খসড়া তৈরি করো।</p><span class="tool-go">লেখা তৈরি <b>↗</b></span></button>
+<button class="tool-card" data-tool="translate"><span class="tool-icon mint">文</span><h3>Smart Translator</h3><p>বাংলা ও ইংরেজিসহ বিভিন্ন ভাষার অনুবাদে সহায়তা নাও।</p><span class="tool-go">অনুবাদ করো <b>↗</b></span></button>
+<button class="tool-card" data-tool="code"><span class="tool-icon orange">&lt;/&gt;</span><h3>Code Assistant</h3><p>কোড বুঝতে, debug করতে ও programming idea সাজাতে সাহায্য নাও।</p><span class="tool-go">কোড নিয়ে কাজ <b>↗</b></span></button>
+<button class="tool-card" data-tool="ideas"><span class="tool-icon pink">✧</span><h3>Idea Generator</h3><p>ব্যবসা, কনটেন্ট, প্রজেক্ট বা সৃজনশীল কাজের আইডিয়া খুঁজে নাও।</p><span class="tool-go">আইডিয়া নাও <b>↗</b></span></button>
+<button class="tool-card" data-tool="summarize"><span class="tool-icon yellow">▤</span><h3>Text Summarizer</h3><p>লম্বা লেখাকে ছোট করে মূল পয়েন্টগুলো গুছিয়ে নিতে পারো।</p><span class="tool-go">সারাংশ তৈরি <b>↗</b></span></button>
+</div></section>
+<section class="workspace" id="chat"><div class="workspace-info"><span class="kicker">MEET YOUR AI</span><h2>তোমার পরের আইডিয়াটা<br><em>এখান থেকেই শুরু।</em></h2><p>একটি প্রশ্ন লিখে শুরু করো। এই preview-তে interface দেখানো হচ্ছে; বাস্তব AI উত্তর পেতে পরে একটি AI API/backend যুক্ত করতে হবে।</p><div class="workspace-points"><span>✓ বাংলা ও ইংরেজি UI</span><span>✓ Mobile-friendly workspace</span><span>✓ API integration-ready design</span></div></div>
+<div class="chat-window"><div class="chat-head"><div class="bot-avatar">✳</div><div><b>Priyo AI Assistant</b><small><i></i> Demo interface</small></div><span class="chat-menu">•••</span></div><div class="chat-body" id="chatBody"><div class="welcome"><span>✳</span><h3>কী নিয়ে কাজ করতে চাও?</h3><p>নিচের একটি prompt বেছে নাও অথবা নিজের প্রশ্ন লেখো।</p></div><div class="suggestions"><button data-prompt="আমার জন্য একটি creative website-এর আইডিয়া দাও।">💡 Website idea</button><button data-prompt="একটি professional email-এর খসড়া লিখে দাও।">✍️ Write an email</button><button data-prompt="HTML ও CSS শেখার beginner roadmap দাও।">⌘ Learn coding</button></div></div><form class="chat-input" id="chatForm"><textarea id="prompt" rows="1" placeholder="এখানে তোমার প্রশ্ন লেখো..." aria-label="Your message"></textarea><button type="submit" aria-label="Send message">↑</button></form><div class="chat-note">Demo only · Real AI response-এর জন্য API connection প্রয়োজন</div></div></section>
+<section class="section feature-section" id="features"><div class="section-head centered"><div><span class="kicker">MADE FOR YOUR FLOW</span><h2>কাজ হোক <em>আরও স্মার্ট</em></h2><p>সহজ, পরিচ্ছন্ন ও দ্রুত অভিজ্ঞতার জন্য তৈরি।</p></div></div><div class="feature-grid"><article><span>01</span><h3>এক জায়গায় সব</h3><p>বারবার আলাদা টুলে না গিয়ে একই workspace থেকে বিভিন্ন কাজের বিভাগে যাও।</p></article><article><span>02</span><h3>বাংলা-বান্ধব অভিজ্ঞতা</h3><p>বাংলা ও ইংরেজি—দুই ভাষার ব্যবহারকারীর কথা মাথায় রেখে ডিজাইন।</p></article><article><span>03</span><h3>যেকোনো স্ক্রিনে</h3><p>মোবাইল, ট্যাবলেট ও ডেস্কটপে সুন্দরভাবে ব্যবহার করা যায়।</p></article></div></section>
+<section class="bottom-cta" id="how"><div><span class="kicker">READY WHEN YOU ARE</span><h2>আইডিয়া আছে? <em>শুরু করা যাক!</em></h2><p>তোমার পরের প্রজেক্টের জন্য সঠিক AI workflow তৈরি করো।</p></div><a class="btn primary" href="#chat">Explore PriyoLinks AI ↗</a></section>
+</main><footer><a class="brand" href="#home"><span class="brand-icon">✳</span><span>PriyoLinks<span class="brand-ai"> AI</span><small>YOUR CREATIVE WORKSPACE</small></span></a><p>Made for curious minds. ✦</p><span>© <b id="year"></b> PriyoLinks AI</span></footer>
+<div class="modal" id="toolModal" aria-hidden="true"><div class="modal-panel"><button class="modal-close" id="closeModal" aria-label="Close">×</button><span class="kicker">PRIYOLINKS AI TOOL</span><h2 id="modalTitle">AI Tool</h2><p id="modalDesc">Choose a task to get started.</p><button class="btn primary modal-action" id="modalAction">Go to AI workspace ↗</button><small>এই টুলের real AI processing চালু করতে backend/API integration প্রয়োজন।</small></div></div>
+<div class="toast" id="toast" role="status"></div><script src="app.js"></script></body></html>

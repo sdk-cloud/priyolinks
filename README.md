@@ -1,25 +1,26 @@
-# নূর — ইসলামিক ওয়েবসাইট
+# PriyoLinks AI
 
-নূর একটি বাংলা ইসলামিক ওয়েবসাইট। কুরআন, হাদিস, দৈনন্দিন দোয়া, নামাজ সম্পর্কে প্রাথমিক তথ্য এবং নির্ভরযোগ্য ইসলামিক রিসোর্স এক জায়গায় সাজিয়ে দেওয়াই এর উদ্দেশ্য।
+PriyoLinks AI is a responsive Bengali-first AI workspace landing page and frontend demo. It brings common AI workflows together in one interface.
 
-## প্রধান বিভাগ
-- `index.html` — সম্পূর্ণ responsive বাংলা হোমপেজ।
-- `styles.css` — রঙ, টাইপোগ্রাফি, layout এবং mobile responsive design।
-- `islamic.js` — mobile navigation, copy buttons এবং local tasbih counter।
-- `android/` — ওয়েবসাইট দেখানোর জন্য Android WebView wrapper project।
+## Included
+- AI chat workspace UI (demo mode; not connected to a model)
+- Writing, translation, coding, idea generation and summarization tool entry points
+- Responsive desktop and mobile layout
+- Bengali and English interface copy
+- No build step or package installation required
 
-## ব্যবহার
-এটি একটি static website। `index.html` সরাসরি browser-এ খুললেই চলবে; build step বা package install দরকার নেই।
+## Run locally
+Open `index.html` in a browser, or serve this folder with any static web server.
 
-## গুরুত্বপূর্ণ নোট
-- কুরআনের আয়াত ও হাদিসের পাশে সূরা/হাদিস নম্বর দেওয়া হয়েছে। অনুবাদগুলো অর্থভিত্তিক বাংলা উপস্থাপনা; গভীর অধ্যয়নের জন্য মূল আরবি, স্বীকৃত অনুবাদ ও তাফসির মিলিয়ে পড়ুন।
-- নামাজের সময় স্থান ও তারিখভেদে পরিবর্তিত হয়। তাই সাইটে কোনো স্থির সময়কে আপনার এলাকার বর্তমান সময় হিসেবে দেখানো হয় না; স্থানীয় নির্ভরযোগ্য সময়সূচি অনুসরণ করুন।
-- বাহ্যিক রিসোর্সের নিজস্ব নীতি ও বিষয়বস্তুর দায় তাদের প্রকাশকদের।
-- সাইটটি শিক্ষামূলক সহায়ক; ব্যক্তিগত ধর্মীয়/ফিকহি সিদ্ধান্তের জন্য যোগ্য আলেমের পরামর্শ নিন।
-- তাসবিহ কাউন্টারটি কেবল বর্তমান পেজ খোলা থাকা অবস্থায় গণনা রাখে।
+## Connect a real AI model
+The current chat intentionally displays a clear demo notice. To enable real AI responses:
+1. Create a backend endpoint (for example, `POST /api/chat`).
+2. Store the AI provider API key as a server-side environment secret. Never put a private API key in browser JavaScript or commit it to GitHub.
+3. Have the backend validate requests, apply rate limits, and call the chosen AI provider.
+4. Update `app.js` to send chat messages to your backend endpoint and render the returned response.
+5. Add appropriate privacy disclosures and usage limits before making the service public.
 
 ## Deploy
-Repository-টি Vercel-এর সঙ্গে যুক্ত থাকলে `main` branch-এ commit push হওয়ার পর স্বয়ংক্রিয় deployment শুরু হওয়ার কথা। Live URL: https://priyolinks.vercel.app/
+This is a static frontend and can be deployed to GitHub Pages, Vercel, or another static hosting provider. A separate backend is required for live AI features.
 
-## Android wrapper
-Android project-এর WebView একই live URL লোড করে। অ্যাপের নাম ও launcher branding আলাদা করে আপডেট করতে হবে; Play Store release-এর আগে নিজস্ব secure signing keystore ব্যবহার করুন।
+© PriyoLinks AI
